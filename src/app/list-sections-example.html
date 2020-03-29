@@ -1,0 +1,22 @@
+<mat-list>
+	<div mat-subheader>Folders</div>
+	<mat-list-item *ngFor="let boat of boats">
+		<mat-icon mat-list-icon>web_asset</mat-icon>
+		<div mat-line><a target="_blank" href="{{boat.url}}">{{boat.title}}</a></div>
+		<div mat-line> {{boat.metadata}} </div>
+		<div mat-line> {{boat.url}} </div>
+		<div mat-line> {{boat.abstract}} </div>
+	</mat-list-item>
+	<mat-divider></mat-divider>
+	<div mat-subheader>Notes</div>
+	<mat-list-item *ngFor="let note of notes">
+		<mat-icon mat-list-icon>note</mat-icon>
+		<div mat-line>{{note.name}}</div>
+		<div mat-line> {{note.updated | date}} </div>
+	</mat-list-item>
+</mat-list>
+
+
+<!-- Copyright 2019 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
